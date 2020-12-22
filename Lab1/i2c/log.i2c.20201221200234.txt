@@ -1,0 +1,111 @@
+ ets Jan  8 2013,rst cause:2, boot mode:(3,7)
+
+load 0x40100000, len 7032, room 16 
+tail 8
+chksum 0x94
+load 0x3ffe8408, len 24, room 0 
+tail 8
+chksum 0x2d
+load 0x3ffe8420, len 3328, room 0 
+tail 0
+chksum 0x6a
+csum 0x6a
+[0;32mI (43) boot: ESP-IDF v3.4-dev-375-g95193813 2nd stage bootloader[0m
+[0;32mI (43) boot: compile time 04:37:34[0m
+[0;32mI (44) boot: SPI Speed      : 40MHz[0m
+[0;32mI (50) boot: SPI Mode       : DOUT[0m
+[0;32mI (56) boot: SPI Flash Size : 1MB[0m
+[0;32mI (63) boot: Partition Table:[0m
+[0;32mI (68) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (79) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (91) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (102) boot:  2 factory          factory app      00 00 00010000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (120) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x15bc4 ( 89028) map[0m
+0x40210010: _stext at ??:?
+[0;32mI (173) esp_image: segment 1: paddr=0x00025bdc vaddr=0x40225bd4 size=0x05c74 ( 23668) map[0m
+[0;32mI (184) esp_image: segment 2: paddr=0x0002b858 vaddr=0x3ffe8000 size=0x003dc (   988) load[0m
+[0;32mI (185) esp_image: segment 3: paddr=0x0002bc3c vaddr=0x40100000 size=0x00080 (   128) load[0m
+[0;32mI (198) esp_image: segment 4: paddr=0x0002bcc4 vaddr=0x40100080 size=0x045d0 ( 17872) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (244) main: |--|--|--|--|--|--|--|
+[0m
+[0;32mI (247) main: Voltage Output = 2.55
+[0m
+[0;32mI (249) main: Voltage Output = 3.8
+[0m
+[0;32mI (251) main: Voltage Output = 3.8
+[0m
+[0;32mI (256) main: Voltage Output = 3.8
+[0m
+[0;32mI (262) main: Voltage Output = 3.8
+[0m
+[0;32mI (269) main: Voltage Output = 3.7
+[0m
+[0;32mI (275) main: Voltage Output = 3.7
+[0m
+[0;32mI (282) main: Voltage Output = 3.7
+[0m
+[0;32mI (288) main: Voltage Output = 3.8
+[0m
+[0;32mI (295) main: Voltage Output = 3.7
+[0m
+[0;32mI (301) main: Voltage Output = 3.7
+[0m
+[0;32mI (308) main: Voltage Output = 3.7
+[0m
+[0;32mI (314) main: Voltage Output = 3.7
+[0m
+[0;32mI (321) main: Voltage Output = 3.7
+[0m
+[0;32mI (328) main: Voltage Output = 3.7
+[0m
+[0;32mI (334) main: Voltage Output = 3.7
+[0m
+[0;32mI (834) main: |--|--|--|--|--|--|--|
+[0m
+[0;32mI (836) main: Voltage Output = 3.0
+[0m
+[0;32mI (838) main: Voltage Output = 3.9
+[0m
+[0;32mI (840) main: Voltage Output = 3.9
+[0m
+[0;32mI (845) main: Voltage Output = 3.9
+[0m
+[0;32mI (851) main: Voltage Output = 3.9
+[0m
+[0;32mI (858) main: Voltage Output = 3.9
+[0m
+[0;32mI (864) main: Voltage Output = 3.9
+[0m
+[0;32mI (871) main: Voltage Output = 3.9
+[0m
+[0;32mI (877) main: Voltage Output = 3.9
+[0m
+[0;32mI (884) main: Voltage Output = 3.9
+[0m
+[0;32mI (891) main: Voltage Output = 3.9
+[0m
+[0;32mI (897) main: Voltage Output = 3.9
+[0m
+[0;32mI (904) main: Voltage Output = 3.9
+[0m
+[0;32mI (910) main: Voltage Output = 3.8
+[0m
+[0;32mI (917) main: Voltage Output = 3.8
+[0m
+[0;32mI (923) main: Voltage Output = 3.8
+[0m
+[0;31mE (1424) i2c: /home/nicholas/esp/ESP8266_RTOS_SDK/components/esp8266/driver/i2c.c:203 (i2c_driver_delete):i2c driver install error[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+Core 0 register dump:
+PC      : 0x00000000  PS      : 0x00000030  A0      : 0x00000000  A1      : 0x3ffebe40  
+A2      : 0xffffffff  A3      : 0x00000000  A4      : 0x0000000a  A5      : 0x00000000  
+A6      : 0x00000000  A7      : 0x402197e4  A8      : 0x00000000  A9      : 0x00000090  
+0x402197e4: uart_write at /home/nicholas/esp/ESP8266_RTOS_SDK/components/vfs/vfs_uart.c:210
+A10     : 0x726f7272  A11     : 0x6174736e  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x00000000  SAR     : 0x0000001f  EXCCAUSE: 0x00000014  
+
+Backtrace: 0x0:0x3ffebe40 
+Entering gdb stub now.
+$T0b#e6
